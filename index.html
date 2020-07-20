@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Hamas_Alrawhani</title>
 </head>
 <body>
@@ -15,16 +16,16 @@
                       <ul>
                           <li class="yemen-city"><a href="#"> Yemen </a><i class="fa fa-angle-right"></i>
                                   <div class="sub-menu-2">
-                                          <ul>
-                                                  <li value="Almahweet" id="changecity" onclick="x"><a href="#"> Almahweet </a><i class="fa fa-angle-right"></i></li>
-                                                  <li value="mareb" id="changecity"><a href="#"> mareb </a><i class="fa fa-angle-right"></i></li>
+                                          <ul id="changecity" onclick="Geeks()">
+                                                  <li value="Almahweet" id="changecity1"><a href="#"> Almahweet </a><i class="fa fa-angle-right"></i></li>
+                                                  <li value="mareb" id="changecity2"><a href="#"> mareb </a><i class="fa fa-angle-right"></i></li>
                                           </ul>
                                   </div>
                           </li>
                           <li class="egypt-city"><a href="#"> Egypt </a><i class="fa fa-angle-right"></i>
                                   <div class="sub-menu-2">
-                                          <ul>
-                                                  <li value="Cairo" id="changecity"><a href="#"> Cairo </a><i class="fa fa-angle-right"></i></li>
+                                          <ul id="changecity" onclick="Geeks()">
+                                                  <li value="Cairo" id="changecity3"><a href="#"> Cairo </a><i class="fa fa-angle-right"></i></li>
                                           </ul>
                                   </div>
                           </li>
@@ -54,22 +55,40 @@
              <img src="images/pic3-cairo.JPG">
 
         </div>
-<script>
+        <script>
+            function Geeks() {
+                var x = document.getElementById("changecity").value;
+                    var y=document.getElementById("gallrey-Almahweet");
+                    y.style.display="block";
+                var x = document.getElementById("changecity2").value;
+                    var y=document.getElementById("gallrey-mareb");
+                    y.style.display="block";
+                var x = document.getElementById("changecity3").value;
+                    var y=document.getElementById("gallrey-Cairo");
+                    y.style.display="block";
 
-      var x=document.getElementById("changecity");
-      var y=document.getElementById("gallrey-Almahweet");
-      var q=document.getElementById("gallrey-mareb");
-      var z=document.getElementById("gallrey-Cairo");
-      x.addEventListener("onclick",function()
-      {
-          if(x.value=="Almahweet")
-          {
-            y.style.display= "block";
-          }
-      }
 
-       )
-</script>
+            }
+        </script>
 
+ <!--       <h1>GeeksforGeeks</h1>
+        <h2>onchange Event Attribute</h2>
+        <p>Choose Subject:</p>
+        <select id="GFG" onchange="Geeks()">
+        <option value="Data Structure">Data Structure
+        <option value="Algorithm">Algorithm
+        <option value="Computer Network">Computer Network
+        <option value="Operating System">Operating System
+        <option value="HTML">HTML
+        </select>
+        <p id="sudo"></p>
+        <script>
+            function Geeks() {
+                var x = document.getElementById("GFG").value;
+                document.getElementById("sudo").innerHTML =
+                "Selected Subject: " + x;
+            }
+        </script>
+                  -->
 </body>
 </html>
