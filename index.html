@@ -5,10 +5,96 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Hamas_Alrawhani</title>
+ <!--<script>
+       function random()
+       {
+           var a=document.getElementById("Country").value;
+           if(a=="Yemen")
+           {
+               var array=["Almahweet","mareb","sana"];
+           }
+           else if(a=="Egypt")
+           {
+               var array=["Cairo","Alexandria","gg"]
+           }
+           else
+           {
+               var array=[];
+           }
+           var string="";
+           for(i=0;i<array.length;i++)
+           {
+               string=string="<option>"+array[i]+"</option>";
+               string="<select name='lol'>"+string+"</select>;"
+           document.getElementById("output").innerHTML=string;
+           }
+
+       }
+</script>-->
+
 </head>
 <body>
+    
+    <div class="contan">
+        <form>
+            <label> Country</label>
+            <select id="Country" onchange="changcity()">
+                <option value="Yemen">Yemen</option>
+                <option value="Egypt">Egypt</option>
+            </select>
+            <label> City</label>
+            <select id="cities" onchange="changimg()">   </select>
+  
+        </form>
+    </div>
+    <div id="gallrey" class="gallrey"></div>
+    
+<script>
+   
+    var yemencities="<option value='Almahweet'>Almahweet</option><option value='mareb'>mareb</option>";
+    var egyptcities="<option value='Cairo'>Cairo</option><option value='Alexandria'>Alexandria</option>";
+    var cities=document.getElementById("cities") ;
+    var country=document.getElementById("Country");
+    var Almahweetimg="<img src='images/pic1.JPG'><img src='images/pic3.JPG'><img src='images/pic2.JPG'>";
+    var marebimg="<img src='images/IMG_1270.jpeg'><img src='images/IMG_1603.jpeg'><img src='images/IMG_1637.jpeg'>";
+    var Cairoimg="<img src='images/pic1-cairo.JPG'><img src='images/pic2-cairo.JPG'><img src='images/pic3-cairo.JPG'>";
+    var Alexandriaimg="<img src='images/pic1-Alexandria.jpg'><img src='images/pic2-Alexandria .jpg'>";
+    var citiyimg=document.getElementById("gallrey");
+    function changcity()
+    {
+        if(country.value=="Yemen")
+        {
+            cities.innerHTML=yemencities ;
+        }
+        else
+        {
+            cities.innerHTML=egyptcities;
+        }
+    }
+    country.addEventListener("change",changcity());
+    function changimg()
+    {
+        if(cities.value=="Almahweet")
+        {
+            citiyimg.innerHTML=Almahweetimg;
+        }
+        else if(cities.value=="mareb")
+        {
+            citiyimg.innerHTML=marebimg;
+        }
+        else if(cities.value=="Cairo")
+        {
+            citiyimg.innerHTML=Cairoimg; 
+        }
+        else if(cities.value=="Alexandria")
+        {
+            citiyimg.innerHTML=Alexandriaimg; 
+        }
+    }
+    cities.addEventListener("change",changimg());
+</script>
 
-     <div class="menu-bar">
+   <!--  <div class="menu-bar">
          <ul>
              <li><a href="#"> Home </a></li>
              <li><a href="#"> Country </a>
@@ -87,7 +173,6 @@
 
         </script>
 
- <!--
                   -->
 </body>
 </html>
