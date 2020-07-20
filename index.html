@@ -1,0 +1,75 @@
+<html lang="en" dir="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hamas_Alrawhani</title>
+</head>
+<body>
+
+     <div class="menu-bar">
+         <ul>
+             <li><a href="#"> Home </a></li>
+             <li><a href="#"> Country </a>
+                  <div class="sub-menu">
+                      <ul>
+                          <li class="yemen-city"><a href="#"> Yemen </a><i class="fa fa-angle-right"></i>
+                                  <div class="sub-menu-2">
+                                          <ul>
+                                                  <li value="Almahweet" id="changecity" onclick="x"><a href="#"> Almahweet </a><i class="fa fa-angle-right"></i></li>
+                                                  <li value="mareb" id="changecity"><a href="#"> mareb </a><i class="fa fa-angle-right"></i></li>
+                                          </ul>
+                                  </div>
+                          </li>
+                          <li class="egypt-city"><a href="#"> Egypt </a><i class="fa fa-angle-right"></i>
+                                  <div class="sub-menu-2">
+                                          <ul>
+                                                  <li value="Cairo" id="changecity"><a href="#"> Cairo </a><i class="fa fa-angle-right"></i></li>
+                                          </ul>
+                                  </div>
+                          </li>
+                      </ul>
+                  </div>
+             </li>
+             <li><a href="#"> About Us </a></li>
+             <li><a href="#"> Services </a></li>
+             <li><a href="#"> Contact </a></li>
+         </ul>
+     </div>
+     <div class="gallrey-Almahweet" id="gallrey-Almahweet">
+             <img src="images/pic1.JPG">
+             <img src="images/pic3.JPG" class="pic3">
+             <img src="images/pic2.JPG">
+
+        </div>
+        <div class="gallrey-mareb" id="gallrey-mareb">
+             <img src="images/IMG_1270.jpeg">
+             <img src="images/IMG_1603.jpeg">
+             <img src="images/IMG_1637.jpeg">
+
+        </div>
+        <div class="gallrey-Cairo" id="gallrey-Cairo">
+             <img src="images/pic1-cairo.JPG">
+             <img src="images/pic2-cairo.JPG">
+             <img src="images/pic3-cairo.JPG">
+
+        </div>
+<script>
+
+      var x=document.getElementById("changecity");
+      var y=document.getElementById("gallrey-Almahweet");
+      var q=document.getElementById("gallrey-mareb");
+      var z=document.getElementById("gallrey-Cairo");
+      x.addEventListener("onclick",function()
+      {
+          if(x.value=="Almahweet")
+          {
+            y.style.display= "block";
+          }
+      }
+
+       )
+</script>
+
+</body>
+</html>
