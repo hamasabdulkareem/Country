@@ -2,7 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
 
     <title>Hamas_Alrawhani</title>
  <!--<script>
@@ -34,7 +36,7 @@
 
 </head>
 <body>
-    
+    <div class="contenar">
     <div class="contan">
         <form>
             <label> Country</label>
@@ -43,26 +45,26 @@
                 <option value="Egypt">Egypt</option>
             </select>
             <label> City</label>
-            <select id="cities" onchange="changimg()">   </select>
-  
+            <select id="cities" onchange="changimg()">
+            </select>
         </form>
     </div>
     <div id="gallrey" class="gallrey"></div>
-    
+</div>
 <script>
    
     var yemencities="<option value='Almahweet'>Almahweet</option><option value='mareb'>mareb</option>";
     var egyptcities="<option value='Cairo'>Cairo</option><option value='Alexandria'>Alexandria</option>";
     var cities=document.getElementById("cities") ;
     var country=document.getElementById("Country");
-    var Almahweetimg="<img src='images/pic1.JPG'><img src='images/pic3.JPG'><img src='images/pic2.JPG'>";
-    var marebimg="<img src='images/IMG_1270.jpeg'><img src='images/IMG_1603.jpeg'><img src='images/IMG_1637.jpeg'>";
-    var Cairoimg="<img src='images/pic1-cairo.JPG'><img src='images/pic2-cairo.JPG'><img src='images/pic3-cairo.JPG'>";
-    var Alexandriaimg="<img src='images/pic1-Alexandria.jpg'><img src='images/pic2-Alexandria .jpg'>";
+    var Almahweetimg="<a href='images/pic1.JPG' data-lightbox='mygallery'><img src='images/pic1.JPG'></a><a href='images/pic3.JPG' data-lightbox='mygallery'><img src='images/pic3.JPG'></a><a href='images/pic2.JPG' data-lightbox='mygallery'><img src='images/pic2.JPG'></a>";
+    var marebimg="<a href='images/IMG_1270.jpeg' data-lightbox='mygallery'><img src='images/IMG_1270.jpeg'></a> <a href='images/IMG_1603.jpeg' data-lightbox='mygallery'><img src='images/IMG_1603.jpeg'></a><a href='images/IMG_1637.jpeg' data-lightbox='mygallery'><img src='images/IMG_1637.jpeg'></a>";
+    var Cairoimg="<a href='images/pic1-cairo.JPG' data-lightbox='mygallery'><img src='images/pic1-cairo.JPG'></a><a href='images/pic2-cairo.JPG' data-lightbox='mygallery'><img src='images/pic2-cairo.JPG'></a><a href='images/pic3-cairo.JPG' data-lightbox='mygallery'><img src='images/pic3-cairo.JPG'></a>";
+    var Alexandriaimg="<a href='images/pic1-Alexandria.jpg' data-lightbox='mygallery'><img src='images/pic1-Alexandria.jpg'></a><a href='images/pic3-Alexandria.jpg' data-lightbox='mygallery'><img src='images/pic3-Alexandria.jpg'></a><a href='images/pic2-Alexandria .jpg' data-lightbox='mygallery'><img src='images/pic2-Alexandria .jpg'></a>";
     var citiyimg=document.getElementById("gallrey");
     function changcity()
     {
-        if(country.value=="Yemen")
+        if(country.value=="Yemen") 
         {
             cities.innerHTML=yemencities ;
         }
